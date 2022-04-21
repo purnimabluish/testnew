@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- open graph -->
+    <meta property="og:url"                content="https://www.techneconhealthcare.com" />
+    <meta property="og:type"               content="wśebsite" />
+    <meta property="og:title"              content="Technecon Healthcare" />
+    <meta property="og:description"        content="Technecon Healthcare trusted consultants for hospitals and healthcare" />
+    <meta property="og:image"              content="https://www.techneconhealthcare.com/images/technecon_v_640.jpg" />
+    <script src="https://kit.fontawesome.com/d05cb56c43.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="assets/images/fav.png">
+    <title>Tata - Verc</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="assets/css/cstyle.css">
+    <!-- developer css if needed -->
+  </head>
+  <body id="content">
+   <header class="fixed-top" id="headermain">
+     <div class="topmenu-navbar border-bottom">
+     <div class="container-fluid">
+       <div class="row justify-content-between">
+         <div class="col-xs-12 col-md">
+           <div id="date"></div>
+         </div>
+         <div class="col-md">
+          <ul class="menubarline ms-auto float-end">
+            <li><button class="btn radius-btn"><i class="fa-brands fa-accessible-icon"></i></button><button class="btn">Accessibility</button></li>
+            <li> <button class="btn radius-btn" id="increasetext"><i class="fa-solid fa-plus"></i></button><button class="btn" id="resettext">Font-size</button> <button class="btn radius-btn" id="decreasetext"><i class="fa-solid fa-minus"></i></button></li>
+            <li>
+              <button class="btn radius-btn"><i class="fa-solid fa-earth-oceania"></i>
+              <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" id="Langauge" data-bs-toggle="dropdown" aria-expanded="false">
+                English
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="Langauge">
+                <li><a class="dropdown-item" href="#">Hindi</a></li>
+                <li><a class="dropdown-item" href="#">Marathi</a></li>
+              </ul>
+              </button>
+            </div></li>
+          </ul>
+        </div>
+       </div>
+     </div>
+    </div>
+    <!-- Toast Alert -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+      <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <!-- <img src="..." class="rounded me-2" alt="..."> -->
+          <strong class="me-auto">Font Msg</strong>
+          <small>just now</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          Hello, world! This is a toast message.
+        </div>
+      </div>
+    </div>
+    <!-- Toast Alert End -->
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <div class="d-flex">
+          <a class="navbar-brand logonav order-2 order-lg-1 mx-2 me-lg-1" href="#"><img src="../html -v5_1_3/assets/images/logo.png" class="img-fluid"></a> 
+        <button class="navbar-toggler collapsed order-1 order-lg-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        </div>
+        <div class="collapse navbar-collapse order-4" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item menulists">
+              <a class="nav-link menulinks active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Explore Resoruce Library
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">option 1</a></li>
+                <li><a class="dropdown-item" href="#">option 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Design Lab</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Join Discussion</a>
+            </li>
+            <li class="nav-tiem">
+              <a class="nav-link" href="#">Events & Workshops</a>
+            </li>
+            <li class="nav-tiem">
+              <a class="nav-link" href="#">Join Us</a>
+            </li>
+              </ul>
+        </div>
+        
+        <!-- auth & seaerch div -->
+        <div class="order-3 order-lg-4 align-middle rightnavs">
+          <ul class="menubarline">
+           <li>
+             <a class="btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+              <span class="top-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+           </span></a>
+           <div class="position-absolute searchcollapse">
+           <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+              <!-- search container -->
+                <div class="search-container">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col">
+                      <form class="d-flex">
+                          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                          <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              <!-- search container ends -->
+            </div>
+          </div>
+        </div>
+          </li>
+      <li>
+        <div class="top-head-dropdown">
+          <div class="btn-group top-head-dropdown1">
+            <button class="btn btn-default dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class=" position-relative"><i class="fa-solid fa-bell"></i>
+                <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+              </span>
+            </button>
+            <ul class="dropdown-menu notificaitons-menu dropdown-menu-end notifydrop">
+                <div class="notify-top">
+                  <h5 class="notifytt">Notifications</h5>
+                  <h5 class="notifytt float-end"><a href="#">View All</h5></a>
+                </div>
+                <div class="notify-inner">
+                  <li>
+                    <a href="#" class="top-text-block">
+                      <div class="top-text-heading">You have <b>3 new themes</b> trending</div>
+                      <div class="top-text-light">15 minutes ago</div>
+                    </a> 
+                  </li>
+                  <li>
+                    <a href="#" class="top-text-block">
+                      <div class="top-text-heading">New asset recommendations in <b>Gaming Laptop</b></div>
+                      <div class="top-text-light">2 hours ago</div>
+                    </a> 
+                  </li>
+                  <li>
+                    <a href="#" class="top-text-block">
+                      <div class="top-text-heading">New asset recommendations in <b>5 themes</b></div>
+                      <div class="top-text-light">4 hours ago</div>
+                    </a> 
+                  </li>
+                  <li>
+                    <a href="#" class="top-text-block">
+                      <div class="top-text-heading">Assets specifications modified in themes</div>
+                      <div class="top-text-light">4 hours ago</div>
+                    </a> 
+                  </li>
+                  <li>
+                    <a href="#" class="top-text-block">
+                      <div class="top-text-heading">We crawled <b>www.dell.com</b> successfully</div>
+                      <div class="top-text-light">5 hours ago</div>
+                    </a> 
+                  </li>
+                  <li>
+                    <a href="#" class="top-text-block">
+                      <div class="top-text-heading">Next crawl scheduled on <b>10 Oct 2016</b></div>
+                      <div class="top-text-light">6 hours ago</div>
+                    </a> 
+                  </li>
+                  <li>
+                    <a href="#" class="top-text-block">
+                      <div class="top-text-heading">You have an update for <b>www.dell.com</b></div>
+                      <div class="top-text-light">7 hours ago</div>
+                    </a> 
+                  </li>
+                  <li>
+                    <a href="#" class="top-text-block">
+                      <div class="top-text-heading"><b>"Gaming Laptop"</b> is now trending</div>
+                      <div class="top-text-light">7 hours ago</div>
+                    </a> 
+                  </li>
+                  <li>
+                    <a href="#" class="top-text-block">
+                      <div class="top-text-heading">New asset recommendations in <b>Gaming Laptop</b></div>
+                      <div class="top-text-light">7 hours ago</div>
+                    </a> 
+                  </li>
+                 <li>
+                  <div class="loader-topbar"></div>
+                 </li>
+                </div>
+            </ul>
+          </div>
+        </div>
+      </li>
+           <li>
+             <!-- <button type="button" class="btn btn-success d-none d-lg-block"> <i class="fa-solid fa-user"></i> Sign up</button> -->
+             <div class="flex-shrink-0 dropdown">
+               <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="true">
+                 <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+               </a>
+               <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2" data-popper-placement="bottom-end" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(-110px, 34px, 0px);">
+                <li><a class="dropdown-item" href="#">My Account</a></li> 
+                <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+                 <li><a class="dropdown-item" href="#">Sign out</a></li>
+               </ul>
+              </li>
+              </ul>
+        </div>
+      
+        <!-- auth & seaerch div ends -->
+    </nav>
+
+ 
+<!-- Notification -->
+
+<!-- Notification -->
+ <!-- beradcrumbs (intenral pages)-->
+ <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="clearfix">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Library</li>
+  </ol>
+</nav>
+<!-- breadcrumbs ends -->
+   </header>
+  <div class="clearfix"></div>
+    <!-- content body-->
+    <!-- SLider Start -->
+    <div id="carouselExampleCaptions" class="carousel" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="1000">
+          <picture class="d-block w-100">
+               <source srcset="assets/images/teacher-banner-mobile.jpg, assets/images/teacher-banner-mobile.webp"
+                      media="(min-width: 300px) and (max-width: 1080px)">
+            <!-- <source srcset="assets/images/teacher-banner.webp 2800w, assets/images/teacher-banner-mobile.webp 720w"
+            sizes="(min-width: 800px) 2800px, (max-width: 799px) 720w" type="image/webp"> 
+            <source srcset="assets/images/teacher-banner.jpg 2800w, assets/images/teacher-banner-mobile.jpg 720w"
+            sizes="(min-width: 800px) 2800px, (max-width: 799px) 720w" type="image/jpg"> -->
+      
+              <img src="assets/images/teacher-banner.jpg" class="img-fluid w-100">
+          </picture>
+          <div class="carousel-caption text-start">
+            <h5>Open Education Resoureces, For every student, and Every Teacher </h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="1000">
+          <picture>
+            <source srcset="assets/images/teacher-banner-mobile.jpg, assets/images/teacher-banner-mobile.webp"
+            media="(min-width: 300px) and (max-width: 1080px)">
+            <img src="assets/images/teacher-banner.jpg" class="d-block w-100" alt="...">
+          </picture>
+          <div class="carousel-caption">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <picture>
+            <source srcset="assets/images/teacher-banner-mobile.jpg, assets/images/teacher-banner-mobile.webp"
+                      media="(min-width: 300px) and (max-width: 1080px)">
+            <img src="assets/images/teacher-banner.jpg" class="d-block w-100" alt="...">
+          </picture>
+          <div class="carousel-caption text-end">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    
+    
+    <!-- SLider end -->
+ 
+    <!-- Feautured Section -->
+ <section class="p-5">
+      <div class="container">
+        <div class="row gy-5">
+          <div class="col-12"> <h2 class="fea-title text-center">Featured Resources</h2></div>
+          <div class="swiper featured-swiper">
+          <div class="swiper-wrapper">
+        <!-- Slide START -->
+          <div class="swiper-slide">
+            <a href="#">
+            <div class="feaslide-mainbx">
+              <div class="feinner-bx">
+                <div class="feiimg-bx">
+                  <div class="circle-r"> <i class="fa-brands fa-rocketchat"></i></div>
+                  <div class="ribbion-r">Ribbion</div>
+                  <div class="addwish"><i class="fa fa-bookmark" aria-hidden="true"></i></div>
+                <img src="assets/images/fetaured.png" class="img-fluid">
+                </div>
+                <div class="fecont-bx">
+                <h4>Proportional Reasoning Lorem Ipusm Lorem IpusmLorem IpusmLorem Ipusm </h4>
+                <div class="fecontentinnbx">
+                  <p class="mainline">Subject : <span class="bluetxt">Mathematics</span></p>
+                  <p class="mainline">Topic : <span class="bluetxt">Computer Science</span></p>
+                  <p class="mainline">By : <span class="bluetxt">Purnima Upadhyay</span></p>
+                  <p class="mainline">For Grade : <span class="bluetxt">1,2,3,4</span></p>
+                  <p class="mainline">Translation Available in : <span class="bluetxt">Hindi, English</span></p>
+                  <div class="clock-comm"><span class="text-start"><i class="fa-regular fa-clock"></i>
+                    10 Mins read</span>
+                    <span class="text-end"><i class="fa-brands fa-rocketchat"></i>
+                      English</span>
+                  </div>
+                 
+                <div class="sharres">
+                  <div class="p-11"><p><a href="#"><i class="fa fa-book"></i>
+                  <span>300</span></a></p></div>
+                  <div class="p-11"><p><a href="#"><i class="fa fa-heart-o"></i>
+                    <span>30</span></a></p></div>
+                  <div class="p-11"><p><a href="#"><i class="fa fa-comment-o"></i>
+                    <span>0</span></a></p></div>
+                  <div class="p-11"><p><a href="#"><i class="fa fa-share-alt"></i>
+                    <span>10 k</span></a></p></div>
+                </div>
+               
+              </div>
+                </div>
+              </div>
+            </div>
+          </a>
+            </div>
+            <!-- Slide END -->
+                    <!-- Slide START -->
+          <div class="swiper-slide">
+            <a href="#">
+            <div class="feaslide-mainbx">
+              <div class="feinner-bx">
+                <div class="feiimg-bx">
+                  <div class="circle-r"> <i class="fa-brands fa-rocketchat"></i></div>
+                  <div class="ribbion-r">Ribbion</div>
+                  <div class="addwish"><i class="fa fa-bookmark" aria-hidden="true"></i></div>
+                <img src="assets/images/fetaured.png" class="img-fluid">
+                </div>
+                <div class="fecont-bx">
+                <h4>Proportional Reasoning Lorem Ipusm Lorem IpusmLorem IpusmLorem Ipusm </h4>
+                <div class="fecontentinnbx">
+                  <p class="mainline">Subject : <span class="bluetxt">Mathematics</span></p>
+                  <p class="mainline">Topic : <span class="bluetxt">Computer Science</span></p>
+                  <p class="mainline">By : <span class="bluetxt">Purnima Upadhyay</span></p>
+                  <p class="mainline">For Grade : <span class="bluetxt">1,2,3,4</span></p>
+                  <p class="mainline">Translation Available in : <span class="bluetxt">Hindi, English</span></p>
+                  <div class="clock-comm"><span class="text-start"><i class="fa-regular fa-clock"></i>
+                    10 Mins read</span>
+                    <span class="text-end"><i class="fa-brands fa-rocketchat"></i>
+                      English</span>
+                  </div>
+                 
+                <div class="sharres">
+                  <div class="p-11"><p><a href="#"><i class="fa fa-book"></i>
+                  <span>300</span></a></p></div>
+                  <div class="p-11"><p><a href="#"><i class="fa fa-heart-o"></i>
+                    <span>30</span></a></p></div>
+                  <div class="p-11"><p><a href="#"><i class="fa fa-comment-o"></i>
+                    <span>0</span></a></p></div>
+                  <div class="p-11"><p><a href="#"><i class="fa fa-share-alt"></i>
+                    <span>10 k</span></a></p></div>
+                </div>
+               
+              </div>
+                </div>
+              </div>
+            </div>
+          </a>
+            </div>
+            <!-- Slide END -->
+                    <!-- Slide START -->
+          <div class="swiper-slide">
+            <a href="#">
+            <div class="feaslide-mainbx">
+              <div class="feinner-bx">
+                <div class="feiimg-bx">
+                  <div class="circle-r"> <i class="fa-brands fa-rocketchat"></i></div>
+                  <div class="ribbion-r">Ribbion</div>
+                  <div class="addwish"><i class="fa fa-bookmark" aria-hidden="true"></i></div>
+                <img src="assets/images/fetaured.png" class="img-fluid">
+                </div>
+                <div class="fecont-bx">
+                <h4>Proportional Reasoning Lorem Ipusm Lorem IpusmLorem IpusmLorem Ipusm </h4>
+                <div class="fecontentinnbx">
+                  <p class="mainline">Subject : <span class="bluetxt">Mathematics</span></p>
+                  <p class="mainline">Topic : <span class="bluetxt">Computer Science</span></p>
+                  <p class="mainline">By : <span class="bluetxt">Purnima Upadhyay</span></p>
+                  <p class="mainline">For Grade : <span class="bluetxt">1,2,3,4</span></p>
+                  <p class="mainline">Translation Available in : <span class="bluetxt">Hindi, English</span></p>
+                  <div class="clock-comm"><span class="text-start"><i class="fa-regular fa-clock"></i>
+                    10 Mins read</span>
+                    <span class="text-end"><i class="fa-brands fa-rocketchat"></i>
+                      English</span>
+                  </div>
+                 
+                <div class="sharres">
+                  <div class="p-11"><p><a href="#"><i class="fa fa-book"></i>
+                  <span>300</span></a></p></div>
+                  <div class="p-11"><p><a href="#"><i class="fa fa-heart-o"></i>
+                    <span>30</span></a></p></div>
+                  <div class="p-11"><p><a href="#"><i class="fa fa-comment-o"></i>
+                    <span>0</span></a></p></div>
+                  <div class="p-11"><p><a href="#"><i class="fa fa-share-alt"></i>
+                    <span>10 k</span></a></p></div>
+                </div>
+               
+              </div>
+                </div>
+              </div>
+            </div>
+          </a>
+            </div>
+            <!-- Slide END -->
+                    <!-- Slide START -->
+          <div class="swiper-slide">
+            <a href="#">
+            <div class="feaslide-mainbx">
+              <div class="feinner-bx">
+                <div class="feiimg-bx">
+                  <div class="circle-r"> <i class="fa-brands fa-rocketchat"></i></div>
+                  <div class="ribbion-r">Ribbion</div>
+                  <div class="addwish"><i class="fa fa-bookmark" aria-hidden="true"></i></div>
+                <img src="assets/images/fetaured.png" class="img-fluid">
+                </div>
+                <div class="fecont-bx">
+                <h4>Proportional Reasoning Lorem Ipusm Lorem IpusmLorem IpusmLorem Ipusm </h4>
+                <div class="fecontentinnbx">
+                  <p class="mainline">Subject : <span class="bluetxt">Mathematics</span></p>
+                  <p class="mainline">Subject : <span class="bluetxt">Mathematics</span></p>
+                  <p class="mainline">Topic : <span class="bluetxt">Computer Science</span></p>
+                  <p class="mainline">By : <span class="bluetxt">Purnima Upadhyay</span></p>
+                  <p class="mainline">For Grade : <span class="bluetxt">1,2,3,4</span></p>
+                  <p class="mainline">Translation Available in : <span class="bluetxt">Hindi, English</span></p>
+                  <div class="clock-comm"><span class="text-start"><i class="fa-regular fa-clock"></i>
+                    10 Mins read</span>
+                    <span class="text-end"><i class="fa-brands fa-rocketchat"></i>
+                      English</span>
+                  </div>
+                 
+                <div class="sharres">
+                  <div class="p-11"><p><a href="#"><i class="fa fa-book"></i>
+                  <span>300</span></a></p></div>
+                  <div class="p-11"><p><a href="#"><i class="fa fa-heart-o"></i>
+                    <span>30</span></a></p></div>
+                  <div class="p-11"><p><a href="#"><i class="fa fa-comment-o"></i>
+                    <span>0</span></a></p></div>
+                  <div class="p-11"><p><a href="#"><i class="fa fa-share-alt"></i>
+                    <span>10 k</span></a></p></div>
+                </div>
+               
+              </div>
+                </div>
+              </div>
+            </div>
+          </a>
+            </div>
+            <!-- Slide END -->
+                    <!-- Slide START -->
+          <div class="swiper-slide">
+            <a href="#">
+            <div class="feaslide-mainbx">
+              <div class="feinner-bx">
+                <div class="feiimg-bx">
+                  <div class="circle-r"> <i class="fa-brands fa-rocketchat"></i></div>
+                  <div class="ribbion-r">Ribbion</div>
+                  <div class="addwish"><i class="fa fa-bookmark" aria-hidden="true"></i></div>
+                <img src="assets/images/fetaured.png" class="img-fluid">
+                </div>
+                <div class="fecont-bx">
+                <h4>Proportional Reasoning Lorem Ipusm Lorem IpusmLorem IpusmLorem Ipusm </h4>
+                <div class="fecontentinnbx">
+                  <p class="mainline">Subject : <span class="bluetxt">Mathematics</span></p>
+                  <p class="mainline">Topic : <span class="bluetxt">Computer Science</span></p>
+                  <p class="mainline">By : <span class="bluetxt">Purnima Upadhyay</span></p>
+                  <p class="mainline">For Grade : <span class="bluetxt">1,2,3,4</span></p>
+                  <p class="mainline">Translation Available in : <span class="bluetxt">Hindi, English</span></p>
+                  <div class="clock-comm"><span class="text-start"><i class="fa-regular fa-clock"></i>
+                    10 Mins read</span>
+                    <span class="text-end"><i class="fa-brands fa-rocketchat"></i>
+                      English</span>
+                  </div>
+                 
+                <div class="sharres">
+                  <div class="p-11"><p><a href="#"><i class="fa fa-book"></i>
+                  <span>300</span></a></p></div>
+                  <div class="p-11"><p><a href="#"><i class="fa fa-heart-o"></i>
+                    <span>30</span></a></p></div>
+                  <div class="p-11"><p><a href="#"><i class="fa fa-comment-o"></i>
+                    <span>0</span></a></p></div>
+                  <div class="p-11"><p><a href="#"><i class="fa fa-share-alt"></i>
+                    <span>10 k</span></a></p></div>
+                </div>
+               
+              </div>
+                </div>
+              </div>
+            </div>
+          </a>
+            </div>
+            <!-- Slide END -->
+        </div>
+     
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+       </div>
+      </div>
+       </div>
+      
+    </section>
+    <!-- Feautured Section -->
+<!-- By Subjects -->
+<section class="g-5 subject-sec">
+  <div class="w-100">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="exploresub">Explore by Subjects</h2>
+      </div>
+      <div class="col-12">
+        <div class="swiper subject-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide subjectinner_slide">
+              <img src="assets/images/subject.png">
+              <h5>Slider 1</h5>
+            </div>
+            <div class="swiper-slide subjectinner_slide">
+              <img src="assets/images/subject.png">
+              <h5>Slider 2</h5>
+            </div>
+            <div class="swiper-slide subjectinner_slide">
+              <img src="assets/images/subject.png">
+              <h5>Slider 3</h5>
+            </div>
+            <div class="swiper-slide subjectinner_slide">
+              <img src="assets/images/subject.png">
+              <h5>Slider 4</h5>
+            </div>
+            <div class="swiper-slide subjectinner_slide">
+              <img src="assets/images/subject.png">
+              <h5>Slider 5</h5>
+            </div>
+            <div class="swiper-slide subjectinner_slide">
+              <img src="assets/images/subject.png">
+              <h5>Slider 6</h5>
+            </div>
+            <div class="swiper-slide subjectinner_slide">
+              <img src="assets/images/subject.png">
+              <h5>Slider 7</h5>
+            </div>
+            <div class="swiper-slide subjectinner_slide">
+              <img src="assets/images/subject.png">
+              <h5>Slider 8</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- By Subjects -->
+
+
+<!-- DIgital resources -->
+<section class="dig_resources">
+  <div class="container">
+    <div class="row">
+    <div class="col-sm-12 col-lg-5">
+      <div>
+        <img src="assets/images/group 411350.png" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-sm-12 col-lg-7">
+      <h2>Explore<br/> Digital Resources</h2>
+      <div class="digiflex">
+        <div class="digimain">
+        <div class="digi-circle">
+          <img src="assets/images/icon1.png">
+          <p>Modules</p>
+          </div>
+        </div>
+        <div class="digimain">
+          <div class="digi-circle">
+            <img src="assets/images/icon1.png">
+            <p>Digital Interactives</p>
+            </div>
+          </div>
+          <div class="digimain">
+            <div class="digi-circle">
+              <img src="assets/images/icon1.png">
+              <p>Tutorials & Concepts</p>
+              </div>
+            </div>
+            <div class="digimain">
+              <div class="digi-circle">
+                <img src="assets/images/icon1.png">
+                <p>OER Curations</p>
+                </div>
+              </div>
+              <div class="digimain">
+                <div class="digi-circle">
+                  <img src="assets/images/icon1.png">
+                  <p>Collection</p>
+                  </div>
+                </div>
+      </div>
+  </div>
+  </div>
+  </div>
+</section>
+
+<!-- DIgital resources -->
+
+<!--  -->
+
+    <!-- content body ends-->
+    <footer class="bg-info">
+
+      <!-- to top button -->
+      <!-- to top button ends -->
+
+      <!-- nav lists -->
+      <div class="container">
+        <div class="row flex-column flex-lg-row justify-content-lg-between">
+          <div class="col-lg-5">
+            
+            <div class="row flex-column">
+              <div class="col">
+                <div class="mb-4">
+                <!-- <img src="https://via.placeholder.com/150/0000FF/808080 ?main logo.com" class="img-fluid mb-2">
+                <img src="https://via.placeholder.com/150/0000FF/808080 ?Text=seeded logo" class="img-fluid mb-2"> -->
+                <!-- <picture>
+                  <source srcset="../html -v5_1_3/assets/images/teacher-banner.webp" type="image/webp">
+                  <source srcset="../html -v5_1_3/assets/images/teacher-banner.jpg" type="image/jpeg"> 
+                  <img src="../html -v5_1_3/assets/images/teacher-banner.jpg">
+                </picture> -->
+              </div>
+                <p>
+                  unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi
+                </p>
+              </div>
+            
+             
+            </div>
+
+          </div>
+
+          <div class="col-lg-5">
+            <div class="row flex-column flex-md-row">
+              <div class="col">
+                <div class="quick-nav">
+                <h5>Quick links</h5>
+                <ul class="nav-list">
+                 <li><a href="#">About</a></li>
+                  <li><a href="#">Credits</a></li>
+                  <li><a href="#">Terms of Service</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Accessibility</a></li>
+                  <li><a href="#" target="_blank">GitHub</a></li>
+                </ul>
+              </div>
+              </div>
+    
+              <div class="col">
+                <div class="quick-nav">
+                <h5>Quick links</h5>
+                <ul class="nav-list">
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Credits</a></li>
+                  <li><a href="#">Terms of Service</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Accessibility</a></li>
+                  <li><a href="#" target="_blank">GitHub</a></li>
+                </ul>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          
+          
+        </div>
+        <div class="row">
+          <div class="col mt-5">
+                <div class="copyright-section">
+                  <p>
+                    © 2022 Tata Institute of Social Sciences
+                  </p>
+                  <p>
+                    Except where otherwise noted, content on this site is licensed under a
+    Creative Commons Attribution 4.0 International license 
+                  </p>
+              </div>
+          </div>
+
+          <div class="social-list">
+            <ul>
+              <li><a href="#"> <i class="fi fi-brands-facebook"></i> </a></li>
+             
+              <li><a href="#"> <i class="fi fi-brands-twitter"></i> </a></li>
+              <li><a href="#"> <i class="fi fi-brands-github"></i> </a></li>
+              <li><a href="#"> <i class="fi fi-brands-youtube"></i> </a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+      <!-- nav list ends -->
+
+      <!-- copyright -->
+      <!-- copyrigh ends -->
+    </footer>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script type='application/javascript' src='assets/js/fastclick.js'></script>
+    <script src="assets/js/jquery.matchHeight.js"></script>
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="assets/js/cscript.js"></script>
+    
+    <!-- Optional JavaScript other scripts-->
+    <!-- on page JavaScript -->
+    <script>
+    
+      $(document).ready(function(){
+     
+      //doc ready ends  
+      });
+    </script>
+    
+  </body>
+</html>
